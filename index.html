@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Googley Study — Be Googley</title>
+<style>
+:root{--blue:#4285F4;--red:#EA4335;--yellow:#F9AB00;--green:#34A853;--bg:#fff;--surface:#fff;--soft:#f8fafd;--text:#202124;--muted:#5f6368;--line:#dadce0;--shadow:0 8px 28px #2021240d}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:Arial,"Tahoma",sans-serif;transition:.2s}body.dark{--bg:#121316;--surface:#1d1f23;--soft:#25282d;--text:#e8eaed;--muted:#bdc1c6;--line:#3c4043;--shadow:0 8px 28px #0003}
+button,input,textarea{font:inherit}button{cursor:pointer}.topbar{height:76px;display:flex;align-items:center;justify-content:space-between;padding:0 clamp(16px,5vw,64px);border-bottom:1px solid var(--line);background:var(--surface);position:sticky;top:0;z-index:5}.brand{display:flex;align-items:center;gap:12px}.mark{display:grid;grid-template-columns:repeat(2,9px);gap:3px;transform:rotate(45deg);margin:0 5px}.mark i{width:9px;height:9px;border-radius:3px}.mark i:nth-child(1){background:var(--blue)}.mark i:nth-child(2){background:var(--red)}.mark i:nth-child(3){background:var(--yellow)}.mark i:nth-child(4){background:var(--green)}.brandname{font-size:21px;font-weight:700;letter-spacing:-.6px}.brandname span:nth-child(1){color:var(--blue)}.brandname span:nth-child(2){color:var(--red)}.brandname span:nth-child(3){color:var(--yellow)}.brandname span:nth-child(4){color:var(--blue)}.brandname span:nth-child(5){color:var(--green)}.brandname span:nth-child(6){color:var(--red)}.tagline{font-size:11px;color:var(--muted);margin-top:4px}.tools{display:flex;gap:8px}.iconbtn{border:1px solid var(--line);background:var(--surface);color:var(--text);border-radius:50px;padding:9px 12px;display:flex;gap:7px;align-items:center}.hero{max-width:1040px;margin:42px auto 26px;padding:0 22px;text-align:center}.eyebrow{display:inline-flex;gap:8px;align-items:center;border:1px solid var(--line);border-radius:30px;padding:7px 13px;color:var(--muted);font-size:12px}.eyebrow b{color:var(--green)}h1{font-size:clamp(32px,5vw,48px);letter-spacing:-1.3px;margin:18px 0 10px}h1 .googley{color:var(--blue)}.hero p{color:var(--muted);line-height:1.8;margin:0 auto;max-width:650px}.progress{display:flex;gap:6px;justify-content:center;margin:23px 0}.progress i{width:34px;height:5px;border-radius:8px;background:var(--line)}.progress i:nth-child(1){background:var(--blue)}.progress i:nth-child(2){background:var(--red)}.progress i:nth-child(3){background:var(--yellow)}.progress i:nth-child(4){background:var(--green)}.layout{max-width:1040px;padding:0 22px 60px;margin:auto;display:block}.panel{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:24px;box-shadow:var(--shadow);margin-bottom:16px}.sectionhead{display:flex;gap:12px;align-items:center;margin-bottom:17px}.num{width:34px;height:34px;border-radius:11px;display:grid;place-items:center;font-weight:700;background:#e8f0fe;color:var(--blue)}body.dark .num{background:#263650}.sectionhead h2{font-size:17px;margin:0}.sectionhead p{font-size:12px;color:var(--muted);margin:4px 0 0}.choices{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.choice{position:relative;border:1px solid var(--line);border-radius:13px;padding:13px 14px;display:flex;align-items:flex-start;gap:10px;min-height:61px;background:var(--surface);transition:.15s}.choice:hover{border-color:var(--blue)}.choice:has(input:checked){border-color:var(--blue);background:color-mix(in srgb,var(--blue) 7%,var(--surface))}.choice input{accent-color:var(--blue);margin-top:4px}.choice strong{font-size:13px;display:block;line-height:1.55}.choice small{display:block;color:var(--muted);font-size:11px;line-height:1.5;margin-top:2px}.full{grid-column:1/-1}.color-dot{width:10px;height:10px;border-radius:50%;display:inline-block;margin-left:5px}.note{border-radius:12px;padding:12px 14px;background:var(--soft);color:var(--muted);font-size:12px;line-height:1.7;margin-top:13px}.field{width:100%;border:1px solid var(--line);background:var(--surface);color:var(--text);border-radius:12px;padding:12px}.upload{border:1px dashed var(--line);padding:18px;border-radius:14px;text-align:center;background:var(--soft);color:var(--muted);font-size:13px}.upload input{max-width:100%;margin-top:10px}.primary{background:var(--blue);color:white;border:0;border-radius:12px;padding:14px 18px;font-weight:700;width:100%;box-shadow:0 4px 12px #4285f433}.primary:hover{filter:brightness(.96)}.preview{position:static;align-self:start;margin-top:20px}.preview h2{margin:0 0 7px;font-size:18px}.preview p{font-size:12px;color:var(--muted);line-height:1.7}.previewbox{background:var(--soft);border:1px solid var(--line);border-radius:13px;padding:15px;min-height:170px;white-space:pre-wrap;overflow-wrap:anywhere;font-size:12px;line-height:1.8;color:var(--muted);max-height:330px;overflow:auto}.actions{display:grid;gap:9px;margin-top:12px}.secondary{background:var(--surface);border:1px solid var(--line);color:var(--text);border-radius:11px;padding:12px;font-weight:600}.platforms{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:10px}.platform{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 5px;text-align:center;color:var(--text);font-size:12px;font-weight:700}.platform span{display:block;font-size:20px;margin-bottom:6px}.chatgpt{color:#10a37f}.gemini{color:#4285F4}.claude{color:#c16b45}.footer{text-align:center;color:var(--muted);font-size:11px;padding:20px;border-top:1px solid var(--line)}.hidden{display:none!important}
+@media(max-width:760px){.layout{display:block}.preview{position:static}.topbar{height:66px;padding:0 14px}.tagline{display:none}.brandname{font-size:18px}.iconbtn .btnlabel{display:none}.hero{margin-top:30px}.panel{padding:18px}.choices{grid-template-columns:1fr}.full{grid-column:auto}}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="brand"><div class="mark" aria-hidden="true"><i></i><i></i><i></i><i></i></div><div><div class="brandname"><span>G</span><span>o</span><span>o</span><span>g</span><span>l</span><span>e</span><span>y</span> <span style="color:var(--text)">Study</span></div><div class="tagline" data-i18n="tagline">Be Googley · GDG on Campus Taif University</div></div></div>
+  <div class="tools"><button class="iconbtn" id="langToggle" title="Change language">🌐 <span id="langLabel">EN</span></button><button class="iconbtn" id="themeToggle" title="Dark mode">☾ <span class="btnlabel" data-i18n="dark">الوضع الداكن</span></button></div>
+</header>
+<section class="hero">
+  <div class="eyebrow"><b>✦</b><span data-i18n="eyebrow">مساحة مذاكرتك، على طريقتك</span></div>
+  <h1><span class="googley">Googley</span> Study</h1>
+  <p data-i18n="intro">خصّص تجربة مذاكرتك، أنشئ برومبتًا يناسب منهجك، ثم انقله إلى مساعدك الذكي المفضل.</p>
+  <div class="progress"><i></i><i></i><i></i><i></i></div>
+</section>
+<main class="layout">
+<div>
+  <section class="panel">
+    <div class="sectionhead"><div class="num">01</div><div><h2 data-i18n="importanceTitle">أهمية المحتوى</h2><p data-i18n="importanceSub">صنّف الأولويات دون حذف أي معلومة</p></div></div>
+    <div class="choices">
+      <label class="choice"><input type="checkbox" name="importance" value="green"><div><strong><i class="color-dot" style="background:#34A853"></i><span data-i18n="veryImportant">مهم جدًا</span></strong><small data-i18n="greenDesc">تركيز أساسي ومراجعة مكثفة</small></div></label>
+      <label class="choice"><input type="checkbox" name="importance" value="orange"><div><strong><i class="color-dot" style="background:#F9AB00"></i><span data-i18n="lessImportant">أقل أهمية</span></strong><small data-i18n="orangeDesc">محتوى مطلوب مع أولوية أقل</small></div></label>
+      <label class="choice full"><input type="checkbox" name="importance" value="red"><div><strong><i class="color-dot" style="background:#EA4335"></i><span data-i18n="notImportant">أقل أولوية</span></strong><small data-i18n="redDesc">تمييزه بالأحمر دون حذفه أو تجاهله بالكامل</small></div></label>
+    </div>
+    <div class="note" data-i18n="noDelete">🔒 قاعدة ثابتة: لا تحذف أي معلومة أو شريحة من المصدر؛ الألوان لتحديد الأولوية فقط.</div>
+  </section>
+  <section class="panel">
+    <div class="sectionhead"><div class="num">02</div><div><h2 data-i18n="summaryTitle">طريقة التلخيص</h2><p data-i18n="summarySub">اختر شكل المخرجات</p></div></div>
+    <div class="choices">
+      <label class="choice"><input type="radio" name="summary" value="text"><div><strong data-i18n="textSummary">ملف نصي</strong><small data-i18n="textDesc">عناوين ونقاط منظمة</small></div></label>
+      <label class="choice"><input type="radio" name="summary" value="visual"><div><strong data-i18n="visualSummary">تلخيص بصري</strong><small data-i18n="visualDesc">صور وجداول وألوان ورسومات</small></div></label>
+    </div>
+  </section>
+  <section class="panel">
+    <div class="sectionhead"><div class="num">03</div><div><h2 data-i18n="languageTitle">لغة الشرح</h2><p data-i18n="languageSub">اختر لغة تناسب لغة المنهج</p></div></div>
+    <div class="choices">
+      <label class="choice"><input type="radio" name="explainLang" value="ar"><div><strong>العربية</strong><small data-i18n="arabicDesc">شرح واختبارات بالعربية</small></div></label>
+      <label class="choice"><input type="radio" name="explainLang" value="en"><div><strong>English</strong><small data-i18n="englishDesc">Explanation and quizzes in English</small></div></label>
+      <label class="choice full"><input type="radio" name="explainLang" value="both"><div><strong data-i18n="bothLang">العربية والإنجليزية</strong><small data-i18n="bothDesc">شرح ثنائي اللغة مع المصطلحات الأصلية</small></div></label>
+    </div>
+  </section>
+  <section class="panel">
+    <div class="sectionhead"><div class="num">04</div><div><h2 data-i18n="studyTitle">أسلوب المذاكرة</h2><p data-i18n="studySub">يمكنك اختيار أكثر من أسلوب</p></div></div>
+    <div class="choices">
+      <label class="choice"><input type="checkbox" name="study" value="fullTest"><div><strong data-i18n="fullTest">شرح كامل ثم اختبار</strong></div></label>
+      <label class="choice"><input type="checkbox" name="study" value="chunkQuiz"><div><strong data-i18n="chunkQuiz">جزئية جزئية مع كويز سريع</strong></div></label>
+      <label class="choice"><input type="checkbox" name="study" value="noShortening"><div><strong data-i18n="noShortening">شرح كامل دون اختصار</strong></div></label>
+      <label class="choice"><input type="checkbox" name="study" value="realLife"><div><strong data-i18n="realLife">أمثلة من واقع الحياة</strong></div></label>
+      <label class="choice full"><input type="checkbox" name="study" value="equations"><div><strong data-i18n="equations">شرح تفصيلي للمعادلات وخطوات الحل</strong></div></label>
+    </div>
+  </section>
+  <section class="panel">
+    <div class="sectionhead"><div class="num">05</div><div><h2 data-i18n="reviewTitle">تثبيت المعلومات</h2><p data-i18n="reviewSub">اختر طرق المراجعة التي تناسبك</p></div></div>
+    <div class="choices">
+      <label class="choice"><input type="checkbox" name="review" value="comprehensive"><div><strong data-i18n="comprehensive">اختبار شامل لكل المحتوى</strong></div></label>
+      <label class="choice"><input type="checkbox" name="review" value="importantQuiz"><div><strong data-i18n="importantQuiz">اختبار قصير للمهم</strong></div></label>
+      <label class="choice"><input type="checkbox" name="review" value="flashcards"><div><strong>Flashcards</strong></div></label>
+      <label class="choice"><input type="checkbox" name="review" value="adaptive"><div><strong data-i18n="adaptive">كويزات متدرجة قابلة للزيادة</strong></div></label>
+      <label class="choice full"><input type="checkbox" name="review" value="conceptSummary"><div><strong data-i18n="conceptSummary">ملخص يثبت أهم المفاهيم</strong></div></label>
+    </div>
+  </section>
+  <section class="panel">
+    <div class="sectionhead"><div class="num">06</div><div><h2 data-i18n="trackingTitle">متابعة المستوى</h2><p data-i18n="trackingSub">اجعل المراجعة تتطور حسب أدائك</p></div></div>
+    <div class="choices">
+      <label class="choice"><input type="checkbox" name="tracking" value="strengths"><div><strong data-i18n="strengths">تحديد نقاط القوة والضعف</strong></div></label>
+      <label class="choice"><input type="checkbox" name="tracking" value="moreWeakness"><div><strong data-i18n="moreWeakness">تكثيف الكويزات في نقاط الضعف</strong></div></label>
+      <label class="choice full"><input type="checkbox" name="tracking" value="errorSummary"><div><strong data-i18n="errorSummary">ملخص للأخطاء مع التصحيح</strong></div></label>
+    </div>
+  </section>
+  <button class="primary" id="generate">✦ <span data-i18n="generate">إنشاء برومبت المذاكرة</span></button>
+</div>
+<aside class="preview">
+  <section class="panel">
+    <h2 data-i18n="previewTitle">برومبتك جاهز للتخصيص</h2>
+    <p data-i18n="previewSub">أنشئ برومبتًا بناءً على اختياراتك، ثم انسخه إلى المنصة المناسبة.</p>
+    <div class="previewbox" id="promptPreview" data-i18n="placeholder">سيظهر البرومبت هنا بعد الضغط على «إنشاء برومبت المذاكرة».</div>
+    <div class="actions"><button class="primary" id="copy">▣ <span data-i18n="copy">نسخ البرومبت</span></button><button class="secondary" id="selectAll" data-i18n="selectAll">تحديد النص</button></div>
+    <div style="margin-top:20px;font-weight:700;font-size:13px" data-i18n="openWith">افتح المنصة المفضلة</div>
+    <div class="platforms">
+      <button class="platform" id="chatgpt"><span class="chatgpt">◉</span>ChatGPT ↗</button>
+      <button class="platform" id="gemini"><span class="gemini">✦</span>Gemini ↗</button>
+      <button class="platform" id="claude"><span class="claude">✳</span>Claude ↗</button>
+    </div>
+    <div class="note" data-i18n="platformNote">تُفتح المنصة في نافذة جديدة. الصقي البرومبت وأرفقي ملف السلايدات هناك حتى يتمكن النموذج من قراءته.</div>
+  </section>
+  <section class="panel">
+    <div class="sectionhead"><div class="num">✓</div><div><h2 data-i18n="privacyTitle">مصمم للمذاكرة بوعي</h2><p data-i18n="privacySub">محتوى المصدر أولًا، ثم التخصيص.</p></div></div>
+    <div class="note" data-i18n="privacyNote">Googley Study أداة لتوليد البرومبتات، ولا تدّعي أنها ترفع الملفات أو تعالجها تلقائيًا داخل هذه الصفحة.</div>
+  </section>
+</aside>
+</main>
+<footer class="footer">Googley Study · Be Googley · GDG on Campus Taif University</footer>
+<script>
+const translations={
+ar:{tagline:"Be Googley · GDG on Campus Taif University",dark:"الوضع الداكن",light:"الوضع الفاتح",eyebrow:"مساحة مذاكرتك، على طريقتك",intro:"خصّص تجربة مذاكرتك، أنشئ برومبتًا يناسب منهجك، ثم انقله إلى مساعدك الذكي المفضل.",importanceTitle:"أهمية المحتوى",importanceSub:"صنّف الأولويات دون حذف أي معلومة",veryImportant:"مهم جدًا",lessImportant:"أقل أهمية",notImportant:"أقل أولوية",greenDesc:"تركيز أساسي ومراجعة مكثفة",orangeDesc:"محتوى مطلوب مع أولوية أقل",redDesc:"تمييزه بالأحمر دون حذفه أو تجاهله بالكامل",noDelete:"🔒 قاعدة ثابتة: لا تحذف أي معلومة أو شريحة من المصدر؛ الألوان لتحديد الأولوية فقط.",summaryTitle:"طريقة التلخيص",summarySub:"اختر شكل المخرجات",textSummary:"ملف نصي",textDesc:"عناوين ونقاط منظمة",visualSummary:"تلخيص بصري",visualDesc:"صور وجداول وألوان ورسومات",languageTitle:"لغة الشرح",languageSub:"اختر لغة تناسب لغة المنهج",arabicDesc:"شرح واختبارات بالعربية",englishDesc:"شرح واختبارات بالإنجليزية",bothLang:"العربية والإنجليزية",bothDesc:"شرح ثنائي اللغة مع المصطلحات الأصلية",studyTitle:"أسلوب المذاكرة",studySub:"يمكنك اختيار أكثر من أسلوب",fullTest:"شرح كامل ثم اختبار",chunkQuiz:"جزئية جزئية مع كويز سريع",noShortening:"شرح كامل دون اختصار",realLife:"أمثلة من واقع الحياة",equations:"شرح تفصيلي للمعادلات وخطوات الحل",reviewTitle:"تثبيت المعلومات",reviewSub:"اختر طرق المراجعة التي تناسبك",comprehensive:"اختبار شامل لكل المحتوى",importantQuiz:"اختبار قصير للمهم",adaptive:"كويزات متدرجة قابلة للزيادة",conceptSummary:"ملخص يثبت أهم المفاهيم",trackingTitle:"متابعة المستوى",trackingSub:"اجعل المراجعة تتطور حسب أدائك",strengths:"تحديد نقاط القوة والضعف",moreWeakness:"تكثيف الكويزات في نقاط الضعف",errorSummary:"ملخص للأخطاء مع التصحيح",generate:"إنشاء برومبت المذاكرة",previewTitle:"برومبتك جاهز للتخصيص",previewSub:"أنشئ برومبتًا بناءً على اختياراتك، ثم انسخه إلى المنصة المناسبة.",placeholder:"سيظهر البرومبت هنا بعد الضغط على «إنشاء برومبت المذاكرة».",copy:"نسخ البرومبت",selectAll:"تحديد النص",openWith:"افتح المنصة المفضلة",platformNote:"تُفتح المنصة في نافذة جديدة. الصقي البرومبت وأرفقي ملف السلايدات هناك حتى يتمكن النموذج من قراءته.",privacyTitle:"مصمم للمذاكرة بوعي",privacySub:"محتوى المصدر أولًا، ثم التخصيص.",privacyNote:"Googley Study أداة لتوليد البرومبتات، ولا تدّعي أنها ترفع الملفات أو تعالجها تلقائيًا داخل هذه الصفحة.",copied:"تم نسخ البرومبت!",needGenerate:"أنشئي البرومبت أولًا."},
+en:{tagline:"Be Googley · GDG on Campus Taif University",dark:"Dark mode",light:"Light mode",eyebrow:"Your study space, your way",intro:"Customize your study experience, generate a prompt for your course, and take it to your favorite AI assistant.",importanceTitle:"Content priority",importanceSub:"Prioritize without deleting information",veryImportant:"Very important",lessImportant:"Lower priority",notImportant:"Lowest priority",greenDesc:"Focus and review intensively",orangeDesc:"Keep it, with lower priority",redDesc:"Mark in red; never delete or fully ignore",noDelete:"🔒 Golden rule: Never delete information or slides from the source. Colors indicate priority only.",summaryTitle:"Summary format",summarySub:"Choose your output style",textSummary:"Text summary",textDesc:"Organized headings and bullet points",visualSummary:"Visual summary",visualDesc:"Images, tables, colors and diagrams",languageTitle:"Explanation language",languageSub:"Choose the language that fits your course",arabicDesc:"Explanation and quizzes in Arabic",englishDesc:"Explanation and quizzes in English",bothLang:"Arabic + English",bothDesc:"Bilingual explanation with original terms",studyTitle:"Study style",studySub:"Choose one or more styles",fullTest:"Full explanation, then a test",chunkQuiz:"Section-by-section with quick quizzes",noShortening:"Complete explanation without shortening",realLife:"Real-life examples",equations:"Detailed equations and worked solutions",reviewTitle:"Knowledge retention",reviewSub:"Choose your preferred review methods",comprehensive:"Comprehensive test for all content",importantQuiz:"Short quiz on key topics",adaptive:"Adaptive quizzes that can grow",conceptSummary:"Key-concept retention summary",trackingTitle:"Progress tracking",trackingSub:"Adapt review to your performance",strengths:"Identify strengths and weaknesses",moreWeakness:"More quizzes on weak areas",errorSummary:"Error summary with corrections",generate:"Generate study prompt",previewTitle:"Your prompt, ready to customize",previewSub:"Generate a prompt from your choices, then copy it to your preferred platform.",placeholder:"Your prompt will appear here after you select Generate study prompt.",copy:"Copy prompt",selectAll:"Select text",openWith:"Continue with your AI assistant",platformNote:"The platform opens in a new tab. Paste the prompt and attach your slides there so the model can read them.",privacyTitle:"Study with intention",privacySub:"Source content first, then customization.",privacyNote:"Googley Study generates prompts; it does not automatically upload or process files inside this page.",copied:"Prompt copied!",needGenerate:"Generate your prompt first."}
+};
+let uiLang="ar",isDark=false,promptText="";
+function t(k){return translations[uiLang][k]||k}
+function setLang(){document.documentElement.lang=uiLang;document.documentElement.dir=uiLang==="ar"?"rtl":"ltr";document.querySelectorAll("[data-i18n]").forEach(el=>{const key=el.dataset.i18n;el.textContent=t(key)});document.getElementById("langLabel").textContent=uiLang==="ar"?"EN":"ع";document.querySelector("#themeToggle [data-i18n]").textContent=isDark?t("light"):t("dark");document.getElementById("themeToggle").firstChild.textContent=isDark?"☀ ":"☾ ";document.getElementById("promptPreview").textContent=promptText||t("placeholder");}
+document.getElementById("langToggle").onclick=()=>{uiLang=uiLang==="ar"?"en":"ar";setLang()};
+document.getElementById("themeToggle").onclick=()=>{isDark=!isDark;document.body.classList.toggle("dark",isDark);setLang()};
+const labels={importance:{green:{ar:"مهم جدًا",en:"Very important"},orange:{ar:"أقل أهمية",en:"Lower priority"},red:{ar:"أقل أولوية",en:"Lowest priority"}},summary:{text:{ar:"ملخص نصي منظم",en:"Organized text summary"},visual:{ar:"تلخيص بصري",en:"Visual summary"}},explainLang:{ar:{ar:"العربية",en:"Arabic"},en:{ar:"الإنجليزية",en:"English"},both:{ar:"العربية والإنجليزية",en:"Arabic and English"}},study:{fullTest:{ar:"شرح كامل ثم اختبار",en:"Full explanation followed by a test"},chunkQuiz:{ar:"شرح جزئية جزئية مع كويز سريع",en:"Section-by-section explanation with quick quizzes"},noShortening:{ar:"شرح كامل دون اختصار",en:"Complete explanation without shortening"},realLife:{ar:"أمثلة من واقع الحياة",en:"Real-life examples"},equations:{ar:"شرح تفصيلي للمعادلات وخطوات الحل",en:"Detailed equations and step-by-step solutions"}},review:{comprehensive:{ar:"اختبار شامل لكل محتوى السلايدات",en:"Comprehensive test covering all slides"},importantQuiz:{ar:"اختبار قصير للمفاهيم المهمة",en:"Short quiz on important concepts"},flashcards:{ar:"بطاقات تعليمية Flashcards",en:"Flashcards"},adaptive:{ar:"كويزات متدرجة قابلة للزيادة",en:"Adaptive quizzes that can increase in number"},conceptSummary:{ar:"ملخص لتثبيت أهم المفاهيم",en:"Summary to reinforce key concepts"}},tracking:{strengths:{ar:"تحديد نقاط القوة والضعف",en:"Identify strengths and weaknesses"},moreWeakness:{ar:"تكثيف الكويزات في نقاط الضعف",en:"Increase quizzes for weak areas"},errorSummary:{ar:"ملخص الأخطاء مع التصحيح",en:"Error summary with corrections"}}};
+function selected(name){return [...document.querySelectorAll(`input[name="${name}"]:checked`)].map(x=>x.value)}
+function buildPrompt(){const imp=selected("importance"),summary=document.querySelector('input[name="summary"]:checked')?.value||null,lang=document.querySelector('input[name="explainLang"]:checked')?.value||null,study=selected("study"),review=selected("review"),tracking=selected("tracking"),L=uiLang;
+const get=(group,arr)=>arr.length?arr.map(v=>labels[group][v][L]).join("، "): (L==="ar"?"لم يتم اختيار خيارات؛ اطلب من المستخدم تحديدها قبل البدء.":"No options selected; ask the user to choose before starting.");
+const languageName=lang?labels.explainLang[lang][L]:(L==="ar"?"غير محددة؛ اسأل المستخدم عن لغة الشرح قبل البدء":"Not selected; ask the user to choose the explanation language before starting");
+const summaryName=summary?labels.summary[summary][L]:(L==="ar"?"غير محدد؛ اسأل المستخدم عن طريقة التلخيص قبل البدء":"Not selected; ask the user to choose a summary format before starting");
+if(L==="ar"){promptText=`أنت مساعد تعليمي خبير. حلّل السلايدات المرفقة واصنع تجربة مذاكرة شاملة حسب التعليمات التالية.
+
+لغة الشرح والاختبارات: ${languageName}. التزم بهذه اللغة في الشرح والأسئلة والإجابات، مع الحفاظ على المصطلحات التقنية الأصلية عند الحاجة.
+
+أولًا — تصنيف الأهمية:
+${imp.map(v=>`- ${labels.importance[v][L]}: ${v==="green"?"باللون الأخضر":v==="orange"?"باللون البرتقالي":"باللون الأحمر"}`).join("\n")||"- صنّف المعلومات حسب أهميتها."}
+ممنوع حذف أي شريحة أو معلومة أو تعريف أو مثال أو معادلة أو جدول أو ملاحظة من المصدر. الألوان تحدد الأولوية فقط. إذا تعذر الجزم بالأهمية، وضّح ذلك ولا تخمّن.
+
+ثانيًا — التلخيص: ${summaryName}.
+ميّز بوضوح بين التعريفات، والتعدادات، والجداول، والرسومات، والمعادلات، والأمثلة. في الملخص البصري حافظ على العلاقات والمعلومات الموجودة في الجداول والرسومات، ولا تستبدلها بزخرفة شكلية. لا تخترع محتوى غير موجود في المصدر، واذكر أي جزء غير واضح.
+
+ثالثًا — أسلوب المذاكرة:
+${get("study",study)}
+
+رابعًا — تثبيت المعلومات:
+${get("review",review)}
+
+خامسًا — متابعة التقدم:
+${get("tracking",tracking)}
+صحّح الإجابات الخاطئة مع شرح السبب والإجابة الصحيحة. تتبّع أداء المتعلم بناءً على إجاباته الفعلية فقط، وحدد نقاط القوة والضعف، وركّز التدريب اللاحق على نقاط الضعف. لا تدّعِ تذكّر نتائج جلسات سابقة إذا لم تكن متاحة في المحادثة.
+
+قواعد الدقة:
+1. اعتمد على السلايدات المرفقة كمصدر أساسي، وحافظ على ترتيبها ومصطلحاتها.
+2. لا تحذف المحتوى الأصلي ولا تضف حقائق خارجية وكأنها واردة في السلايدات.
+3. إذا كانت معلومة أو صورة غير مقروءة، اذكر ذلك صراحة.
+4. لا تعرض الحل مباشرة في الاختبارات إلا بعد محاولة المتعلم، ما لم يطلب الحل.
+5. نظّم المخرجات بعناوين واضحة، وتأكد من تغطية جميع الشرائح.
+ابدأ بفهرس قصير لخطة العمل، ثم نفّذ الاختيارات أعلاه.`}
+else{promptText=`You are an expert learning assistant. Analyze the attached lecture slides and create a complete study experience using the instructions below.
+
+Explanation and quiz language: ${languageName}. Use this language consistently for explanations, questions, and answers while preserving original technical terms when useful.
+
+1. CONTENT PRIORITY
+${imp.map(v=>`- ${labels.importance[v][L]}: mark in ${v==="green"?"green":v==="orange"?"orange":"red"}`).join("\n")||"- Classify content by importance."}
+Never delete any slide, detail, definition, example, equation, table, or note from the source. Colors indicate priority only. If importance is uncertain, state that instead of guessing.
+
+2. SUMMARY FORMAT: ${summaryName}.
+Clearly distinguish definitions, lists, tables, diagrams, equations, and examples. For visual summaries, preserve the information and relationships in tables and diagrams; do not replace them with decoration. Do not invent source content, and flag anything unreadable.
+
+3. STUDY STYLE
+${get("study",study)}
+
+4. KNOWLEDGE RETENTION
+${get("review",review)}
+
+5. PROGRESS TRACKING
+${get("tracking",tracking)}
+Correct wrong answers and explain why, including the correct answer. Track progress only from actual answers provided, identify strengths and weaknesses, and focus future practice on weak areas. Do not claim to remember previous sessions if their data is unavailable in the conversation.
+
+ACCURACY RULES
+- Use the attached slides as the primary source and preserve their order and terminology.
+- Do not delete original content or present outside facts as if they came from the slides.
+- Explicitly flag unreadable text or images.
+- In quizzes, do not reveal answers until the learner has attempted them unless they ask.
+- Organize outputs with clear headings and ensure every slide is covered.
+Begin with a short outline of your approach, then carry out the selected options.`}
+document.getElementById("promptPreview").textContent=promptText;document.getElementById("promptPreview").scrollTop=0;}
+document.getElementById("generate").onclick=buildPrompt;
+document.getElementById("copy").onclick=async()=>{if(!promptText)buildPrompt();try{await navigator.clipboard.writeText(promptText);document.getElementById("copy").querySelector("span").textContent=t("copied");setTimeout(()=>document.getElementById("copy").querySelector("span").textContent=t("copy"),1600)}catch(e){const r=document.createRange();r.selectNodeContents(document.getElementById("promptPreview"));const s=window.getSelection();s.removeAllRanges();s.addRange(r)}};
+document.getElementById("selectAll").onclick=()=>{if(!promptText)buildPrompt();const r=document.createRange();r.selectNodeContents(document.getElementById("promptPreview"));const s=window.getSelection();s.removeAllRanges();s.addRange(r)};
+function openAI(url){if(!promptText)buildPrompt();window.open(url,"_blank","noopener,noreferrer");}
+document.getElementById("chatgpt").onclick=()=>openAI("https://chatgpt.com/");
+document.getElementById("gemini").onclick=()=>openAI("https://gemini.google.com/");
+document.getElementById("claude").onclick=()=>openAI("https://claude.ai/");
+setLang();
+</script>
+</body></html>
